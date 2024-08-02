@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import "./filterOptions.css";
+import { customStyles } from "@/lib/utils";
 
 interface FilterOption {
   value: string;
@@ -53,7 +54,7 @@ const FilterOptions: React.FC<FilterOptionsProps> = ({
 
   return (
     <div className="filter-options">
-      <h3>Filters</h3>
+     
       <div className="filter-group">
         <label>Category:</label>
         <Select
@@ -62,6 +63,7 @@ const FilterOptions: React.FC<FilterOptionsProps> = ({
           onChange={onCategoryChange}
           isClearable
           classNamePrefix="react-select"
+          styles={customStyles}
         />
       </div>
       <div className="filter-group">
@@ -72,6 +74,7 @@ const FilterOptions: React.FC<FilterOptionsProps> = ({
           onChange={onRatingChange}
           isClearable
           classNamePrefix="react-select"
+          styles={customStyles}
         />
       </div>
       <div className="filter-group">
