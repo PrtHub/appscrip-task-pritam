@@ -1,0 +1,153 @@
+.navbar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 15px 5px;
+
+  max-width: 1280px;
+  margin: 0 auto;
+
+  border-bottom: 1px solid #E5E5E5;
+
+  position: relative;
+}
+
+.navbar__top_section {
+    width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 20px;
+}
+
+.navbar__logo {
+   width: 35px;
+   height: 35px;
+   object-fit: cover;
+}
+
+.navbar__title {
+   font-size: 36px;
+   font-weight: 600;
+   color: #000000;
+   text-align: center;
+   letter-spacing: 1px;
+}
+
+.navbar__icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.navbar__bottom_section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar__links {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   list-style: none;
+   gap: 60px;
+}
+
+.navbar__links li {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.navbar__menu svg {
+    display: none;
+}
+
+.mobile_nav {
+    display: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .navbar__links li {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .navbar__title {
+        font-size: 30px;
+    }
+
+    .navbar__icons svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .navbar__logo {
+        width: 32px;
+        height: 32px;
+     }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar__bottom_section {
+        display: none;
+    }
+
+    .navbar__title {
+        font-size: 20px;
+    }
+
+    .navbar__icons svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .navbar__logo {
+        width: 20px;
+        height: 20px;
+     }
+
+     .navbar__menu {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+     }
+
+     .navbar__menu svg {
+         display:  block;
+         cursor: pointer;
+         fill: #121111;
+     }
+
+     .navbar__mobile_nav {
+        position: absolute;
+        top: 50px;
+        left: 5px;
+
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        list-style: none;
+     }
+
+}
