@@ -38,11 +38,12 @@ const ProductsPage = () => {
     const fetchProducts = async () => {
       dispatch(setLoading(true));
       try {
-        const response = await axios.get<Product[]>('https://fakestoreapi.com/products');
+        const response = await axios.get<Product[]>('/api/products');
         const data = response.data;
+        
         dispatch(setProducts(data));
-      } catch (error) {
-        console.error("Error fetching products:", error);
+      } catch (error: any) {
+        console.error("Error fetching products:", error.message);
       } finally {
         dispatch(setLoading(false));
       }
